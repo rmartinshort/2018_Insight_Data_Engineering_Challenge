@@ -2,7 +2,6 @@
 
 #RMS Nov 2018
 
-import glob
 import os
 
 
