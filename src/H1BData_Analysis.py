@@ -3,7 +3,6 @@
 
 #RMS Nov 2018
 
-
 import time
 import util_functions as util
 from DataObject import H1BDataObject
@@ -42,6 +41,10 @@ class H1Bdata():
 
 	def loaddata(self):
 
+		'''
+		Read the input file and load relevant data into a dictiionary
+		'''
+
 		delim, self.column_headers, self.column_header_indices \
 		= util.get_column_headers(self.inputfile,self.colnames)
 
@@ -69,9 +72,9 @@ class H1Bdata():
 			t1 = time.time()
 			print("Loading data from file %s" %self.inputfile) 
 
-        
         #This counter keeps track of the number of entries read in so that
         #the preallocated list can be filled
+
 		i = 0
 		#Keep track of the total number of certified visa holders
 		self.total_certified = 0
