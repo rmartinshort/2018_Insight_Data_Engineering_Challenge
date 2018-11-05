@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#H1BData_Analysis.py. Written for 2019 Data Insight Engineering Challenge
 
 #RMS Nov 2018
 
@@ -35,7 +36,7 @@ class H1Bdata():
 		,'TN','KY','IL','WI','MI','IN','OH','AL','FL','GA','SC','NC','VA','WV'\
 		,'DC','MD','NJ','CT','RI','MA','PA','NY','VT','NH','ME','DE']
 
-		#List of valid visa classes
+		#List of valid visa classes (from the problem description)
 		self.visa_classes = ['H-1B','H-1B1','E-3']
 
 
@@ -68,9 +69,10 @@ class H1Bdata():
 			t1 = time.time()
 			print("Loading data from file %s" %self.inputfile) 
 
-
+        
+        #This counter keeps track of the number of entries read in so that
+        #the preallocated list can be filled
 		i = 0
-
 		#Keep track of the total number of certified visa holders
 		self.total_certified = 0
 
@@ -126,7 +128,7 @@ class H1Bdata():
 
 		#Because we need to handle ties correctly, we first generate lists of occupations
 		#and their associated counts. Note the use of the negative value of count to ensure 
-		#that the final order is preserved
+		#that the final order is preserved. Occupations and counts will be lists of length 10
 
 		occupations = []
 		counts = []
@@ -176,7 +178,7 @@ class H1Bdata():
 
 		#Because we need to handle ties correctly, we first generate lists of occupations
 		#and their associated counts. Note the use of the negative value of count to ensure 
-		#that the final order is preserved
+		#that the final order is preserved. States and counts will be lists of length 10.
 
 		states = []
 		counts = []

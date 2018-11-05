@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#DataObject.py. Written for 2019 Data Insight Engineering Challenge
 
 #RMS Nov 2018
 

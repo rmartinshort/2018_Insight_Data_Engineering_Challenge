@@ -1,8 +1,8 @@
 #!/usr/bin/env python
+#util_functions.py. Written for 2019 Data Insight Engineering Challenge
 
 #RMS Nov 2018
 
-import glob
 import os
 
 
