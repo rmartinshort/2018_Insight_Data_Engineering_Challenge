@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#H1BData_Analysis.py. Written for 2019 Data Insight Engineering Challenge
+#H1BData_Analysis.py. Written for 2018 Data Insight Engineering Challenge
 
 #RMS Nov 2018
 
@@ -94,6 +94,8 @@ class H1Bdata():
 		            alldata[self.column_headers[0]][i] = status
 		            alldata[self.column_headers[1]][i] = visa_class
 		            alldata[self.column_headers[2]][i] = soc_code
+		            #Some of the occupation names are surrounded by quotoation marks
+		            #We need to remove this
 		            alldata[self.column_headers[3]][i] = soc_name.replace('"','')
 		            alldata[self.column_headers[4]][i] = workstate
 		            self.total_certified += 1 
